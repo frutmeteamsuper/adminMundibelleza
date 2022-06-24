@@ -1,0 +1,33 @@
+export interface TixInterface{
+	id?:string;	
+	idcategory?:string;	
+	idsub?:string;	
+	address?:string;
+	altitud?:string;
+	autor?:string;
+	brand?:string;
+	cantD?:number;
+	capacidad?:number;
+	category?:string;
+	costPrice?:string;
+	description?:string;
+	desLg?:string;
+	dificulty?:string;
+	disponibilidad?:string;
+	distancia?:string;
+	duration?:string;
+	images?: Array<string>;
+	lenguaje?:string;
+	model?:string;
+	modules?: Array<any>;
+	name?:string;
+	notes?:string;
+	precio?:number;
+	price?:number;
+	productName?:string;
+	status?:string;
+	temp?:string;
+	tips?:string;
+	tittle?:string;
+	userd?:string;
+}
