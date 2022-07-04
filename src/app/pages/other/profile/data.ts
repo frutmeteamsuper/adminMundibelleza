@@ -2,17 +2,17 @@ const activities = [
     {
         time: '02 hours ago',
         title: 'Designing Shreyu Admin',
-        text: 'CSS C.A admin'
+        text: 'MundiBelleza admin'
     },
     {
         time: '21 hours ago',
         title: 'UX and UI for Ubold Admin',
-        text: 'CSS C.A admin'
+        text: 'MundiBelleza admin'
     },
     {
         time: '22 hours ago',
         title: 'UX and UI for Hyper Admin',
-        text: 'CSS C.A admin'
+        text: 'MundiBelleza admin'
     },
 ];
 
