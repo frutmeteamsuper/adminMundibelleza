@@ -46,83 +46,83 @@ export class DataApiService {
   		});
   	 deleteTix(id: string){
 	//	const token = this.authService.getToken();
-		const url_api=`https://db.buckapi.com:3032/api/tixes/${id}`;
+		const url_api=`https://db.buckapi.com:3069/api/tixes/${id}`;
 		return this.http
 		.delete<TixInterface>(url_api)
 		.pipe(map(data => data));
 	}
   	updateTix(tix :TixInterface, id: string){
 		// let token = this.authService.getToken();
-		const url_api=`https://db.buckapi.com:3032/api/tixes/${id}`;
+		const url_api=`https://db.buckapi.com:3069/api/tixes/${id}`;
 		return this.http
 		.put<TixInterface>(url_api, tix)
 		.pipe(map(data => data));
 	}
 	getAllTixs(){
-		const url_api = 'hhttps://db.buckapi.com:3032/api/tixes?filter[where][status]=activated';
+		const url_api = 'hhttps://db.buckapi.com:3069/api/tixes?filter[where][status]=activated';
 		return this.http.get(url_api);
 	}
  		getTamanoOrders(){
-	 	const url_api = 'https://db.buckapi.com:3032/api/orders?filter[where][status]=new';
+	 	const url_api = 'https://db.buckapi.com:3069/api/orders?filter[where][status]=new';
 	 	return (this.dentists = this.http.get(url_api));
 	 }
  		getTamanoSuscriber(){
-	 	const url_api = 'https://db.buckapi.com:3032/api/suscriber?filter[where][status]=new';
+	 	const url_api = 'https://db.buckapi.com:3069/api/suscriber?filter[where][status]=new';
 	 	return (this.suscribers = this.http.get(url_api));
 	 }
 	getAllQuotes(){
-		const url_api = 'https://db.buckapi.com:3032/api/order?filter[where][orderType]=appointment';
+		const url_api = 'https://db.buckapi.com:3069/api/order?filter[where][orderType]=appointment';
 		return this.http.get(url_api);
 	}
 	saveTixFree(tix :TixInterface){
 	//	let token = this.authService.getToken();
-		const url_api='https://db.buckapi.com:3032/api/tixes';
+		const url_api='https://db.buckapi.com:3069/api/tixes';
 		return this.http
 		.post<TixInterface>(url_api, tix)
 		.pipe(map(data => data));
 	}
 	// getTamanoIni(){
-	// 	const url_api = 'https://db.buckapi.com:3025/api/tixes?filter[where][initload]=activated';
+	// 	const url_api = 'https://db.buckapi.com:3069/api/tixes?filter[where][initload]=activated';
 	// 	return (this.tixs = this.http.get(url_api));
 	// }
  	getAllTixsReturn(){
-		const url_api = 'https://db.buckapi.com:3032/api/tixes?filter[where][status]=activated';
+		const url_api = 'https://db.buckapi.com:3069/api/tixes?filter[where][status]=activated';
 		return (this.tixs = this.http.get(url_api));
 	}
 	getAllDentistsReturn(){
-		const url_api = 'https://db.buckapi.com:3032/api/dentist';
+		const url_api = 'https://db.buckapi.com:3069/api/dentist';
 		return (this.users = this.http.get(url_api));
 	}	
 	getAllSuscribersReturn(){
-		const url_api = 'https://db.buckapi.com:3032/api/suscriber?filter[where][status]=new';
+		const url_api = 'https://db.buckapi.com:3069/api/suscriber?filter[where][status]=new';
 		return (this.suscribers = this.http.get(url_api));
 	}
 	getAllOrdersReturn(){
-		const url_api = 'https://db.buckapi.com:3032/api/orders?filter[where][status]=new';
+		const url_api = 'https://db.buckapi.com:3069/api/orders?filter[where][status]=new';
 		return (this.orders = this.http.get(url_api));
 	}
 	getAllCategories(){
-		const url_api = 'https://db.buckapi.com:3032/api/categories';
+		const url_api = 'https://db.buckapi.com:3069/api/categories';
 		return (this.categories = this.http.get(url_api));
 	}
 
 	// getAllTixsInitload(){
-	// 	const url_api = 'https://db.buckapi.com:3025/api/tixes?filter[where][initload]=activated';
+	// 	const url_api = 'https://db.buckapi.com:3069/api/tixes?filter[where][initload]=activated';
 	// 	return this.http.get(url_api);
 	// }
 	// getInfo(){
-	// 	const url_api=`https://db.buckapi.com:3025/api/infos/`;
+	// 	const url_api=`https://db.buckapi.com:3069/api/infos/`;
 	// 	this.info = this.http.get(url_api);
 	// 	return (this.info);
 	// }
 	// saveSale(sale :SaleInterface){
-	// 	const url_api='https://db.buckapi.com:3025/api/sale';
+	// 	const url_api='https://db.buckapi.com:3069/api/sale';
 	// 	return this.http
 	// 	.post<SaleInterface>(url_api, sale)
 	// 	.pipe(map(data => data));
 	// }
 	saveOrder(order :OrderInterface){
-		const url_api='https://db.buckapi.com:3025/api/order';
+		const url_api='https://db.buckapi.com:3069/api/order';
 		return this.http
 		.post<OrderInterface>(url_api, order)
 		.pipe(map(data => data));
@@ -135,44 +135,44 @@ export class DataApiService {
 // 	}
 
 	getAllSpecs(){
-		const url_api = 'https://db.buckapi.com:3032/api/specs';
+		const url_api = 'https://db.buckapi.com:3069/api/specs';
 		return (this.specs = this.http.get(url_api));
 	}
 	updateOrder(order :OrderInterface, id: string){
 		// let token = this.authService.getToken();
-		const url_api=`https://db.buckapi.com:3032/api/order/${id}`;
+		const url_api=`https://db.buckapi.com:3069/api/order/${id}`;
 		return this.http
 		.put<OrderInterface>(url_api, order)
 		.pipe(map(data => data));
 	}
 	updateDentist(dentist :DentistInterface, id: string){
 		// let token = this.authService.getToken();
-		const url_api=`https://db.buckapi.com:3032/api/dentist/${id}`;
+		const url_api=`https://db.buckapi.com:3069/api/dentist/${id}`;
 		return this.http
 		.put<DentistInterface>(url_api, dentist)
 		.pipe(map(data => data));
 	}
 	getProfileById(id:string){
 		let indice = id;
-		const url_api=`https://db.buckapi.com:3032/api/dentist/${indice}`;
+		const url_api=`https://db.buckapi.com:3069/api/dentist/${indice}`;
 		this.dentist = this.http.get(url_api);
 		return (this.dentist);
 	}		
 	getOrderById(id:string){
 		let indice = id;
-		const url_api=`https://db.buckapi.com:3032/api/orders/${indice}`;
+		const url_api=`https://db.buckapi.com:3069/api/orders/${indice}`;
 		this.order = this.http.get(url_api);
 		return (this.order);
 	}	
 	getCourseDetailById(id:string){
 		let indice = id;
-		const url_api=`https://db.buckapi.com:3032/api/tixes/${indice}`;
+		const url_api=`https://db.buckapi.com:3069/api/tixes/${indice}`;
 		this.dentist = this.http.get(url_api);
 		return (this.dentist);
 	}
 	
 	getOrderByNpedido(npedido: string){
-		const url_api = `https://db.buckapi.com:3025/api/order?filter[where][npedido]=${npedido}`;
+		const url_api = `https://db.buckapi.com:3069/api/order?filter[where][npedido]=${npedido}`;
 		this.order = this.http.get(url_api);
 		return (this.order);
 
