@@ -23,7 +23,7 @@
 
             <form (ngSubmit)="sendTix()" [formGroup]="typeValidationForm">
           <div class="row">
-              <div class="col-12">
+              <div class="col-6">
                 <div class="form-group">
                   <label> Nombre del producto</label>
                   <input type="text" class="form-control" formControlName="name"
@@ -33,13 +33,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12">
+              <div class="col-6">
                 <div class="form-group">
                   <label>Referencia</label>
-                  <input type="text" class="form-control" formControlName="ref"
-                    [ngClass]="{'is-invalid': typesubmit && type.ref.errors}" placeholder="referencia" />
-                  <div *ngIf="typesubmit && type.ref.errors" class="invalid-feedback">
-                    <span *ngIf="type.ref.errors.required">Este campo es requerido.</span>
+                  <input type="text" class="form-control" formControlName="model"
+                    [ngClass]="{'is-invalid': typesubmit && type.model.errors}" placeholder="Modelo" />
+                  <div *ngIf="typesubmit && type.model.errors" class="invalid-feedback">
+                    <span *ngIf="type.model.errors.required">Este campo es requerido.</span>
                   </div>
                 </div>     
               </div>
@@ -47,23 +47,24 @@
                 <div class="form-group">
                   <label>Descripcion</label>
                   <input type="text" class="form-control" formControlName="description"
-                    [ngClass]="{'is-invalid': typesubmit && type.description.errors}" placeholder="Marca" />
+                    [ngClass]="{'is-invalid': typesubmit && type.description.errors}" placeholder="Descripcion" />
                   <div *ngIf="typesubmit && type.description.errors" class="invalid-feedback">
                     <span *ngIf="type.description.errors.required">Este campo es requerido.</span>
                   </div>
                 </div>   
               </div>
-              <div class="col-12">
+              <div class="col-6">
                 <div class="form-group">
-                  <label>Presentación</label>
+                  <label>Presentacion</label>
                   <input type="text" class="form-control" formControlName="presentation"
-                    [ngClass]="{'is-invalid': typesubmit && type.presentation.errors}" placeholder="Pesentació" />
+                    [ngClass]="{'is-invalid': typesubmit && type.presentation.errors}" placeholder="Presentacion" />
                   <div *ngIf="typesubmit && type.presentation.errors" class="invalid-feedback">
                     <span *ngIf="type.presentation.errors.required">Este campo es requerido.</span>
                   </div>
                 </div>   
               </div>
-              <div class="col-12">
+
+              <div class="col-6">
                 <div class="form-group">
                   <label>Precio</label>
                   <div>
