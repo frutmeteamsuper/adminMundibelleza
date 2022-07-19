@@ -22,9 +22,11 @@ export interface TixInterface{
 	modules?: Array<any>;
 	name?:string;
 	notes?:string;
+	presentation?:string;
 	precio?:number;
 	price?:number;
 	productName?:string;
+	ref?:string;
 	status?:string;
 	temp?:string;
 	tips?:string;

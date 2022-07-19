@@ -46,20 +46,20 @@ export class DataApiService {
   		});
   	 deleteTix(id: string){
 	//	const token = this.authService.getToken();
-		const url_api=`https://db.buckapi.com:3069/api/tixes/${id}`;
+		const url_api=`https://db.buckapi.com:3069/api/products/${id}`;
 		return this.http
 		.delete<TixInterface>(url_api)
 		.pipe(map(data => data));
 	}
   	updateTix(tix :TixInterface, id: string){
 		// let token = this.authService.getToken();
-		const url_api=`https://db.buckapi.com:3069/api/tixes/${id}`;
+		const url_api=`https://db.buckapi.com:3069/api/products/${id}`;
 		return this.http
 		.put<TixInterface>(url_api, tix)
 		.pipe(map(data => data));
 	}
 	getAllTixs(){
-		const url_api = 'hhttps://db.buckapi.com:3069/api/tixes?filter[where][status]=activated';
+		const url_api = 'https://db.buckapi.com:3069/api/products?filter[where][status]=activated';
 		return this.http.get(url_api);
 	}
  		getTamanoOrders(){
@@ -76,17 +76,17 @@ export class DataApiService {
 	}
 	saveTixFree(tix :TixInterface){
 	//	let token = this.authService.getToken();
-		const url_api='https://db.buckapi.com:3069/api/tixes';
+		const url_api='https://db.buckapi.com:3069/api/products';
 		return this.http
 		.post<TixInterface>(url_api, tix)
 		.pipe(map(data => data));
 	}
 	// getTamanoIni(){
-	// 	const url_api = 'https://db.buckapi.com:3069/api/tixes?filter[where][initload]=activated';
+	// 	const url_api = 'https://db.buckapi.com:3069/api/products?filter[where][initload]=activated';
 	// 	return (this.tixs = this.http.get(url_api));
 	// }
  	getAllTixsReturn(){
-		const url_api = 'https://db.buckapi.com:3069/api/tixes?filter[where][status]=activated';
+		const url_api = 'https://db.buckapi.com:3069/api/products?filter[where][status]=activated';
 		return (this.tixs = this.http.get(url_api));
 	}
 	getAllDentistsReturn(){
@@ -107,7 +107,7 @@ export class DataApiService {
 	}
 
 	// getAllTixsInitload(){
-	// 	const url_api = 'https://db.buckapi.com:3069/api/tixes?filter[where][initload]=activated';
+	// 	const url_api = 'https://db.buckapi.com:3069/api/products?filter[where][initload]=activated';
 	// 	return this.http.get(url_api);
 	// }
 	// getInfo(){
@@ -166,7 +166,7 @@ export class DataApiService {
 	}	
 	getCourseDetailById(id:string){
 		let indice = id;
-		const url_api=`https://db.buckapi.com:3069/api/tixes/${indice}`;
+		const url_api=`https://db.buckapi.com:3069/api/products/${indice}`;
 		this.dentist = this.http.get(url_api);
 		return (this.dentist);
 	}

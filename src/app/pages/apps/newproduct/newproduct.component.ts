@@ -53,10 +53,10 @@ export class NewproductComponent implements OnInit {
   public categories:CategoryInterface ={}
   public tix:TixInterface ={
     name:"",
-    model:"",
-    idcategory:"",
-    idsub:"",
-    brand:"",    
+    ref:"",
+    category:"",
+    description:"",
+    presentation:"",       
     images:[],
     price:0
   };
@@ -112,8 +112,8 @@ export class NewproductComponent implements OnInit {
       this.tix = this.typeValidationForm.value;
       // this.tix.userd="a"+val;
       this.tix.status="activated";
-      this.tix.idcategory=this._uw.categorySelected;
-      this.tix.idsub=this._uw.subcategorySelected;
+      // this.tix.idcategory=this._uw.categorySelected;
+      // this.tix.idsub=this._uw.subcategorySelected;
       this._uw.categorySelected="";
       this._uw.subcategorySelected="";
      // this.tix.subcategories=this.selectedItems;
@@ -204,8 +204,9 @@ export class NewproductComponent implements OnInit {
       this.typeValidationForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       price: ['', [Validators.required]],
-      model: ['', [Validators.required]],
-      brand: ['', [Validators.required]]
+      ref: ['', [Validators.required]],
+      description: ['', [Validators.required]],
+      presentation: ['', [Validators.required]]
 //      category: ['', [Validators.required]]
 //      subcategory: ['', [Validators.required]]
         });

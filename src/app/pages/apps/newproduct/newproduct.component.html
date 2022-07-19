@@ -35,21 +35,31 @@
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <label>Modelo</label>
-                  <input type="text" class="form-control" formControlName="model"
-                    [ngClass]="{'is-invalid': typesubmit && type.model.errors}" placeholder="Modelo" />
-                  <div *ngIf="typesubmit && type.model.errors" class="invalid-feedback">
-                    <span *ngIf="type.model.errors.required">Este campo es requerido.</span>
+                  <label>Referencia</label>
+                  <input type="text" class="form-control" formControlName="ref"
+                    [ngClass]="{'is-invalid': typesubmit && type.ref.errors}" placeholder="referencia" />
+                  <div *ngIf="typesubmit && type.ref.errors" class="invalid-feedback">
+                    <span *ngIf="type.ref.errors.required">Este campo es requerido.</span>
                   </div>
                 </div>     
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <label>Marca</label>
-                  <input type="text" class="form-control" formControlName="brand"
-                    [ngClass]="{'is-invalid': typesubmit && type.brand.errors}" placeholder="Marca" />
-                  <div *ngIf="typesubmit && type.brand.errors" class="invalid-feedback">
-                    <span *ngIf="type.brand.errors.required">Este campo es requerido.</span>
+                  <label>Descripcion</label>
+                  <input type="text" class="form-control" formControlName="description"
+                    [ngClass]="{'is-invalid': typesubmit && type.description.errors}" placeholder="Marca" />
+                  <div *ngIf="typesubmit && type.description.errors" class="invalid-feedback">
+                    <span *ngIf="type.description.errors.required">Este campo es requerido.</span>
+                  </div>
+                </div>   
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <label>Presentación</label>
+                  <input type="text" class="form-control" formControlName="presentation"
+                    [ngClass]="{'is-invalid': typesubmit && type.presentation.errors}" placeholder="Pesentació" />
+                  <div *ngIf="typesubmit && type.presentation.errors" class="invalid-feedback">
+                    <span *ngIf="type.presentation.errors.required">Este campo es requerido.</span>
                   </div>
                 </div>   
               </div>
