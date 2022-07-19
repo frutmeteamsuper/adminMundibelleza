@@ -36,10 +36,10 @@
               <div class="col-6">
                 <div class="form-group">
                   <label>Referencia</label>
-                  <input type="text" class="form-control" formControlName="model"
-                    [ngClass]="{'is-invalid': typesubmit && type.model.errors}" placeholder="Modelo" />
-                  <div *ngIf="typesubmit && type.model.errors" class="invalid-feedback">
-                    <span *ngIf="type.model.errors.required">Este campo es requerido.</span>
+                  <input type="text" class="form-control" formControlName="ref"
+                    [ngClass]="{'is-invalid': typesubmit && type.ref.errors}" placeholder="Modelo" />
+                  <div *ngIf="typesubmit && type.ref.errors" class="invalid-feedback">
+                    <span *ngIf="type.ref.errors.required">Este campo es requerido.</span>
                   </div>
                 </div>     
               </div>
