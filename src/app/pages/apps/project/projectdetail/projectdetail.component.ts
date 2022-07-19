@@ -61,9 +61,10 @@ export class ProjectdetailComponent implements OnInit {
     public tix:TixInterface ={
     tittle:"",
     description:"",    
+    presentation:"",    
+    ref:"",    
     images:[],
-    modules:[],
-    costPrice:""
+    price:0
   };
     public categories:CategoryInterface ={}
     public tixs:TixInterface;
@@ -247,8 +248,9 @@ ngOnInit() {
        this.typeValidationForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       price: ['', [Validators.required]],
-      model: ['', [Validators.required]],
-      brand: ['', [Validators.required]]
+      description: ['', [Validators.required]],
+      presentation: ['', [Validators.required]],
+      ref: ['', [Validators.required]]
 //      category: ['', [Validators.required]]
 //      subcategory: ['', [Validators.required]]
         });

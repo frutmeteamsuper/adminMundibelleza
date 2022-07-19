@@ -23,13 +23,17 @@
           <div class="text-muted mt-3">
             <p>{{tix.name}}</p>   
           </div>
-          <h6 class="mt-0 header-title">Modelo</h6>
+          <h6 class="mt-0 header-title">Descripcion</h6>
           <div class="text-muted mt-3">
-            <p>{{tix.model}}</p>   
+            <p>{{tix.description}}</p>   
           </div>
-          <h6 class="mt-0 header-title">Marca</h6>
+          <h6 class="mt-0 header-title">Ref</h6>
           <div class="text-muted mt-3">
-            <p>{{tix.brand}}</p>   
+            <p>{{tix.ref}}</p>   
+          </div> 
+          <h6 class="mt-0 header-title">Pesentacion</h6>
+          <div class="text-muted mt-3">
+            <p>{{tix.presentation}}</p>   
           </div>
           <h6 class="mt-0 header-title">Precio</h6>
           <div class="text-muted mt-3">
@@ -63,23 +67,33 @@
                         </div>
                         <div class="col-12">
                           <div class="form-group">
-                            <label>Modelo</label>
-                            <input type="text" class="form-control" formControlName="model"  [(ngModel)]="tix.model"
-                              [ngClass]="{'is-invalid': typesubmit && fval.model.errors}" placeholder="Modelo" />
-                            <div *ngIf="typesubmit && fval.model.errors" class="invalid-feedback">
-                              <span *ngIf="fval.model.errors.required">Este campo es requerido.</span>
+                            <label>Descripcion</label>
+                            <input type="text" class="form-control" formControlName="description"  [(ngModel)]="tix.description"
+                              [ngClass]="{'is-invalid': typesubmit && fval.description.errors}" placeholder="descripcion" />
+                            <div *ngIf="typesubmit && fval.description.errors" class="invalid-feedback">
+                              <span *ngIf="fval.description.errors.required">Este campo es requerido.</span>
                             </div>
                           </div>     
                         </div>
                         <div class="col-12">
                           <div class="form-group">
-                            <label>Marca</label>
-                            <input type="text" class="form-control" formControlName="brand"  [(ngModel)]="tix.brand"
-                              [ngClass]="{'is-invalid': typesubmit && fval.brand.errors}" placeholder="Marca" />
-                            <div *ngIf="typesubmit && fval.brand.errors" class="invalid-feedback">
-                              <span *ngIf="fval.brand.errors.required">Este campo es requerido.</span>
+                            <label>Ref</label>
+                            <input type="text" class="form-control" formControlName="ref"  [(ngModel)]="tix.ref"
+                              [ngClass]="{'is-invalid': typesubmit && fval.ref.errors}" placeholder="Marca" />
+                            <div *ngIf="typesubmit && fval.ref.errors" class="invalid-feedback">
+                              <span *ngIf="fval.ref.errors.required">Este campo es requerido.</span>
                             </div>
                           </div>   
+                        </div>
+                         <div class="col-12">
+                          <div class="form-group">
+                            <label>Presentacion</label>
+                            <input type="text" class="form-control" formControlName="presentation"  [(ngModel)]="tix.presentation"
+                              [ngClass]="{'is-invalid': typesubmit && fval.presentation.errors}" placeholder="Presentacion" />
+                            <div *ngIf="typesubmit && fval.presentation.errors" class="invalid-feedback">
+                              <span *ngIf="fval.presentation.errors.required">Este campo es requerido.</span>
+                            </div>
+                          </div>     
                         </div>
                         <div class="col-12">
                           <div class="form-group">
