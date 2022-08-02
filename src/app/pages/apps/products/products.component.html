@@ -12,7 +12,7 @@
   </div>
 
   <div class="row" *ngIf="tixs!='undefined'">
-    <div class="col-xl-4 col-lg-6" *ngFor="let product of tixs">
+    <div class="col-xl-4 col-lg-6" *ngFor="let product of tixs" routerLink="/productdetail/{{product.id}}" style="cursor:pointer;">
       <div class="card">
         <div class="card-body">
           <div>
