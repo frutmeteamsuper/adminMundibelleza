@@ -112,8 +112,8 @@ export class NewproductComponent implements OnInit {
       this.tix = this.typeValidationForm.value;
       // this.tix.userd="a"+val;
       this.tix.status="activated";
-      // this.tix.idcategory=this._uw.categorySelected;
-      // this.tix.idsub=this._uw.subcategorySelected;
+      this.tix.idcategory=this._uw.categorySelected;
+      this.tix.idsub=this._uw.subcategorySelected;
       this._uw.categorySelected="";
       this._uw.subcategorySelected="";
      // this.tix.subcategories=this.selectedItems;
@@ -237,7 +237,7 @@ export class NewproductComponent implements OnInit {
   }
   onFileAdded(file: FilePreviewModel) {
     
-    file.fileName="https://db.buckapi.com:3035/imgCssca/server/local-storage/tixsImages/"+file.fileName;
+    file.fileName="https://db.buckapi.com:3035/imgMundibelleza/server/local-storage/tixsImages/"+file.fileName;
     this.myFiles.push(file);
     // this.images.push(file.fileName);
 
